@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+$colorBlueText: #1AC6FF;
+$colorBlueBtn: #1AC6FF;
+$colorText: #000;
+$colorWhite: #fff;
+$fontPT: 'PT Sans', Arial, Helvetica, sans-serif;
+
+.clearFix{
+	clear: both;
+}
+
+@mixin button($backgroundColor, $borderColor, $padding){
+	background:	$backgroundColor;
+	border: 1px solid $borderColor;
+	border-radius: 3px;
+	text-align: center;
+	a{	
+		display: block;
+		font-size: 0.9em;
+		text-decoration: none;
+		color: $colorWhite;
+		text-transform: uppercase;
+		padding: $padding;
+	}
+}
+
+//elementin oldugu yerde gizledilmesi ucun
+.hideAnimation{
+	position: relative;
+	opacity: 0;
+}
+
+//elementin y oxunda -20px yuxari surusdurulmesi ucun
+.animationUpY{
+	position: relative;
+	opacity: 0;
+	transform: translateY(-20px);
+}
+//elementin y oxunda -70px yuxari surusdurulmesi ucun
+.animationUpY70px{
+	position: relative;
+	opacity: 0;
+	transform: translateY(-70px);
+}
+//elementin X oxunda 100px soldan surusdurulmesi ucun
+.animationLeftX100px{
+	position: relative;
+	opacity: 0;
+	transform: translateX(-100px);
+}
+//elementin X oxunda 100px sagdan surusdurulmesi ucun
+.animationRightX100px{
+	position: relative;
+	opacity: 0;
+	transform: translateX(100px);
+}
+//elementin y oxunda 20px asagi surusdurulmesi ucun
+.animationDownY{
+	position: relative;
+	opacity: 0;
+	transform: translateY(20px);
+}
+//elementin y oxunda -100px asagi surusdurulmesi ucun
+.animationDownY100px{
+	position: relative;
+	opacity: 0;
+	transform: translateY(-100px);
+}
+
+//elementin y oxunda 100px yuxari surusdurulmesi ucun
+.animationUpY100px{
+	position: relative;
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+//elementin y oxunda -50px soldan surusdurulmesi ucun
+.animationLeftXmin{
+	position: relative;
+	opacity: 1;
+	transform: translateX(-50px);
+}
+//elementin y oxunda 50px asagi surusdurulmesi ucun
+.animationRightXmin{
+	position: relative;
+	opacity: 1;
+	transform: translateX(50px);
+}
+//elementin x oxunda 1000px soldan surusdurulmesi ucun
+.animationLeftX{
+	position: relative;
+	opacity: 0;
+	transform: translateX(-1000px);
+}
+//elementin x oxunda -1000px asagi surusdurulmesi ucun
+.animationRightX{
+	position: relative;
+	opacity: 0;
+	transform: translateX(1000px);
+}
+//elementin gosterilmesi. Show elements
+.animationShow{
+	opacity: 1;
+	transform: translateY(0px);
+	transform: translateX(0px);
+	transition: all 0.4s ease;
+}
+
+
+#about, #features, #prices {
+	overflow: hidden;
+}

@@ -1,0 +1,167 @@
+#contacts{
+	.container-fluid{
+		background-color: #1AC6FF;
+		.container{
+			padding: 40px 0;
+			i{
+				color: $colorWhite;
+				margin: 10px;
+			}
+			h2{
+				font-size: 3em;
+				color: $colorWhite
+			}
+			p{
+				font-size: 1em;
+				font-family: $fontPT;
+				color: $colorWhite;
+			}
+			button{
+				@include button(transparent, $colorWhite, 13px 23px);
+				margin: 15px;
+				transition: all 0.3s ease;
+				&:hover{
+					background-color: #fff;
+					a{
+						color: $colorBlueText;
+						transition: all 0.3s ease;
+					}
+				}
+			}
+
+			@media screen and (min-width: 1200px){
+				h2, p{
+					text-align: left;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				h2{
+					font-size: 2.4em;
+				}
+				p{
+					font-size: 0.9em;
+					line-height: 26px;
+				}
+			}
+			@media screen and (min-width: 480px) and (max-width: 760px) {
+				h2{
+					font-size: 2.4em;
+				}
+				p{
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+}
+
+#footer{
+	background-image: url('../images/backgroundImage.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	.container{
+		padding-top: 70px;
+		padding-bottom: 25px;
+		img{
+			opacity: 0.7;
+		}
+		.pTags{
+			width: 80%;
+			p{
+				color:#fff;
+				font-family: $fontPT;
+				font-size: 1em;
+				margin-top: 30px;
+				margin-bottom: 15px;
+			}
+			span{
+				color: #fff;
+				font-family: $fontPT;
+				font-size: 1em;
+				font-weight: bold;
+			}
+		}
+		h4{
+			text-align: center;
+			color: #fff;
+			font-size: 1em;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+		.col-md-4{
+			i{
+				font-size: 3.4em;
+				margin: 12px;
+				color: darken($colorBlueText, 8%);
+				cursor: pointer;
+				&:hover{
+					color: darken($colorBlueText, 13%);
+				}
+			}
+		}
+		.col-md-3{
+			div{
+				padding: 13px;
+				i{	
+					font-size: 1.3em;
+					color: darken($colorBlueText, 13%);
+				}
+				a{
+					font-family: $fontPT;
+					font-size: 1em;
+					text-decoration: none;
+					color: darken($colorBlueText, 13%);
+					transition: all 0.5s ease;
+					&:hover{
+						color: darken($colorBlueText, 8%);
+						text-decoration: underline;
+					}
+				}
+				span{
+					color: #fff;
+					font-family: $fontPT;
+					font-size: 1em;
+				}
+			}
+		}
+		@media screen and (max-width: 760px){
+			.pTags{
+				width: 100%;
+			}
+			h4{
+				margin-top: 35px;
+				font-size: 0.9em;
+			}
+			.col-md-4{
+				text-align: left;
+				div{
+					display: inline-block;
+					i{
+						font-size: 2.3em;
+					}
+				}
+			}
+		}
+
+		h2{
+			font-size: 0.9em;
+			color: darken(lightgray, 13%);
+			text-align: center;
+			margin: 5px 0;
+			&:nth-child(1){
+				margin-top: 70px;
+			}
+			ul{
+				display: inline-block;
+				transition: all 0.4s ease;
+				cursor: pointer;
+				&:hover{
+					color: lighten(#1AC6FF, 20%);
+				}
+			}
+		}
+	}
+}

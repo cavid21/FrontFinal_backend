@@ -1,0 +1,24 @@
+
+#preloader{
+
+
+	@keyframes spin {
+		0%{
+			transform: rotate(-360deg);
+		}
+		50%{
+			transform: rotate(0deg);
+		}
+		100%{
+			transform: rotate(360deg);
+		}
+	}
+
+
+	div{
+		margin: 0 auto;
+		margin-top: 320px;
+		animation: spin 5s ease infinite;
+	}
+	
+}

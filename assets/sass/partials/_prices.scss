@@ -1,0 +1,251 @@
+#prices{
+	.container-fluid{
+		background-image: url("../images/backgroundImage.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		.container{
+			&:first-of-type{
+				padding: 45px 0;
+			}
+			h2{
+				color: $colorWhite;
+				font-size: 3em;
+			}
+			@media screen and (max-width:480px){
+				h2{
+					font-size: 2.5em;
+				}
+			}
+			span{
+				font-family: $fontPT;
+				font-size: 1em;
+				color: $colorWhite;
+			}
+			input{
+				width: 182px;
+				height: 45px;
+				border: none;
+				border-left: 3px solid $colorBlueBtn;
+				text-indent: 15px;
+				font-size: 1.2em;
+				margin-top: 15px;
+			}
+
+			@media screen and (max-width: 760px){
+				input{
+					width: 100%;
+				}
+			}
+
+
+			button{
+				@include button(transparent, $colorWhite, 12px 28px);
+				margin-top:15px;
+				transition: all 0.3s ease;
+				&:hover{
+					background-color: #fff;
+					a{
+						color: $colorBlueText;
+						transition: all 0.3s ease;
+					}
+				}
+			}
+			
+
+		}
+	}
+}
+
+#pricesTwo{
+	.container{
+		.product{
+			padding: 60px;
+			h2{
+			font-size: 3em;
+			margin-bottom: 10px;
+				span{
+					color: $colorBlueText;
+				}
+			}
+			p{
+				font-family: $fontPT;
+				font-size: 1.1em;
+			}
+				
+			.text{
+				width: 45%;
+				margin: 0 auto;
+			}
+			@media screen and (max-width: 480px){
+				.text{
+					width: 100%;
+				}	
+				h2{
+					font-size: 1.9em;
+				}
+				p{
+					font-size: 0.9em;
+				}
+			}
+			@media screen and (min-width: 480px) and (max-width: 960px){
+				.text{
+					width: 60%;
+				}	
+
+				h2{
+					font-size: 1.9em;
+				}
+				p{
+					font-size: 0.9em;
+				}
+			}
+
+		}
+		
+		.columns{
+			.backgroundGray{
+				background-color: #F9F9F9;
+				box-shadow: 0 0 1px lightgray;;
+				transition: all 0.4s ease;
+				&:nth-of-type(1){
+					margin: 30px 0;
+				}
+				h4{
+					font-size: 1.8em;
+					text-transform: uppercase;
+					padding: 25px 0;
+					transition: all 0.4s ease;
+				}
+				h2{
+					font-size: 8em;
+					color: $colorBlueText;
+					transition: all 0.4s ease;
+				}
+				i{
+					font-size: 3em;
+					margin-top: 20px;
+					font-weight: bold;
+					color: $colorBlueText;
+					transition: all 0.4s ease;
+				}
+				.darkGray{
+					padding: 10px 0;
+					background-color: #F2F2F3;
+					transition: all 0.4s ease;
+					.costs{
+						width:200px;
+						margin: 0 auto;
+
+						i{
+							float: left;
+						}
+					}
+				}
+				.data{
+					padding: 40px;
+					padding-bottom: 80px;
+
+					li{
+						font-size: 1.1em;
+						border-bottom: 1px solid #F2F2F3;
+						padding: 20px 0;
+						transition: all 0.4s ease;
+						&:last-child{
+							border: none;
+						}
+					}
+					button{
+						@include button(transparent, $colorBlueBtn, 12px 0 );
+						width: 100%;
+						transition: all 0.4s ease;
+						a{
+							color: $colorBlueBtn;
+						}
+					}
+				}
+				p{
+					text-transform: uppercase;
+					font-size: 1em;
+					color: $colorBlueText;
+					transition: all 0.4s ease;
+				}
+
+				&:hover{
+					background-color: #1AC6FF;
+					h4, h2, p, i, li {
+						color: #fff;
+					}
+					li{
+						border-bottom-color:lighten(#1AC6FF, 10%);
+						transition: all 0.4s ease;
+					}
+					.darkGray{
+						background-color: #23ACDB;
+					}
+					.data{
+						button{
+							border-color: #fff;
+							a{
+								color: #fff;
+								transition: all 0.4s ease;
+							}
+							&:hover{
+								background-color: #fff;
+								a{
+									color: #1AC6FF;
+								}
+							}
+						}
+					}
+				}
+				
+				@media screen and (min-width:750px) and (max-width: 1000px) {
+					h2{
+						font-size: 5em;
+					}
+					.darkGray{
+						.costs{
+							width:125px;
+							margin-bottom:5px;
+						}
+					}
+					.data{
+						li{
+							padding: 15px 0;
+							font-size: 0.9em;
+						}
+					}	
+				}
+			}
+
+			.disable{
+				pointer-events: none;
+				h4, h2, p, i, li {
+					color: #BEBEBE;
+				}
+				.data{
+					button{
+						border-color: #BEBEBE;
+						a{
+							color: #BEBEBE;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.backColor{
+		background-color: #F0F0F0;
+		.logo{
+			padding: 25px 0;
+			img{
+				margin: 0 20px;
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,149 @@
+#features{
+	.colorGrayBackground{
+		background-color: #F0F0F0;
+		width: 100%;
+
+		.container{
+			padding-top: 50px;
+			position: relative;
+			.lorem{
+				width: 30%;
+				float: left;
+				margin-top: 32px;
+				position: relative;
+				z-index: 11;
+				div{
+					border-top-left-radius: 5px;
+					border-bottom-left-radius: 5px;
+					padding: 30px;
+					width: 100%;
+					
+					h4{
+						font-size: 1.1em;
+						font-weight: bold;
+						text-transform: uppercase;
+						line-height: 30px;
+						color: $colorBlueText;
+
+					}
+					p{
+						font-family: $fontPT;
+						font-size: 1em;
+						line-height: 30px;
+						color: darken(gray, 15%);
+						margin: 0;
+					}
+				}
+			}
+
+			img{
+				width: 76.5%;
+				position: absolute;
+				right: 0;
+			}
+			@media screen and (min-width: 480px) and (max-width: 1200px){
+				.lorem{
+					display: flex;
+					justify-content: center;
+					width: 100%;				
+				}
+
+				img{
+					width: 100%;
+					margin: 0 auto;
+					position: relative;
+					top: 35px;
+				}
+			}
+
+			@media screen and (min-width: 480px) and (max-width: 630px){
+				.lorem{
+					div{
+						padding: 15px;
+						h4{
+							font-size: 1em;
+						}
+						p{
+							line-height: 20px;
+						}
+					}
+				}
+
+				img{
+					position: relative;
+					top: 15px;
+				}
+			}
+
+			@media screen and (max-width: 480px){
+				.lorem{
+					width: 100%;
+
+					div{
+						padding: 15px;
+
+						h4{
+							font-size: 1em;
+						}
+						p{
+							line-height: 20px;
+						}
+					}
+				}
+
+				img{
+					width: 100%;
+					margin: 0 auto;
+					position: relative;
+					top: 10px;
+				}
+			}		
+		}
+	}
+
+	.feature{
+		margin: 50px 0;
+		.col-md-3{
+			margin-top: 60px;
+			i{
+				color: $colorBlueText;
+				margin-bottom: 25px;
+				&:hover{
+					color: lighten($colorBlueText, 10%);
+				}
+			}
+			h4{
+				font-size: 1em;
+				font-weight: bold;
+				line-height: 25px;
+			}
+			p{
+				font-size: 1em;
+				font-family: $fontPT;
+				line-height: 25px;
+				color: gray;
+			}
+			.star{
+				i{
+					margin-bottom: 0;
+					&:last-child{
+						margin-bottom: 28px;
+					}
+				}
+				width: 50px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 1200px){
+	.container{
+		padding-bottom: 35px;
+	}	
+}
+@media screen and (max-width: 480px){
+	.container{
+		padding-bottom: 20px;
+	}	
+}

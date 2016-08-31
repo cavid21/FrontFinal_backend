@@ -1,0 +1,120 @@
+#about{
+
+	.backColor{
+		background-color: #F0F0F0;
+		.logo{
+			padding: 25px 0;
+			div{
+				display: inline-block;
+				img{
+					margin: 0 20px;
+				}
+			}
+		}
+	}
+
+	.cont{
+		.tabs{
+			padding: 60px;
+			button{
+				width: 185px;
+				height: 60px;
+				border: 1px solid lightgray;
+				background-color: transparent;
+				transition: all 0.3s ease;
+				text-transform: uppercase;
+				&:hover{
+					background-color: $colorBlueBtn;
+					color: #fff;
+				}
+			}
+		}
+		@media screen and (max-width: 760px){
+			.tabs{
+				padding: 60px 20px;
+				button{
+					width: 100%;
+				}
+			}
+		}
+	
+		.firstTab, .secondTab, .thirdTab{
+			border-bottom: 1px solid lightgray;
+			padding: 15px 0;
+			img{
+				width: 100%;
+			}
+			.textTab{
+				padding: 35px 10px;
+				.h2{
+					margin-top: 30px;
+				}
+				h2{
+					text-transform: uppercase;
+					font-size: 2.2em;
+					span{
+						color: $colorBlueText;
+					}
+				}
+				.p{
+					padding: 0 100px;
+				}
+				p{
+					font-size: 1em;
+					font-family: $fontPT;
+					&:first-of-type{
+						margin: 20px 0;
+					}
+					&:nth-child(3){
+						margin-bottom: 50px;
+					}
+				}
+				button{
+					@include button(transparent, $colorBlueBtn, 13px 23px);
+					margin: 5px;
+					transition: all 0.3s ease;
+					&:hover{
+						background-color: $colorBlueBtn;
+						color: $colorText;
+						a{
+							color: $colorWhite;	
+							transition: all 0.3s ease;
+						}
+					}
+					a{
+						color: $colorBlueText;
+					}
+				}
+			}
+		}
+
+		.thirdTab{
+			i{
+				color: $colorBlueText;
+				padding-bottom: 20px;
+			}
+			.col-md-4{
+				padding: 70px 0;
+			}
+			h2{
+				font-size: 3em;
+			}
+			h5{
+				font-size: 1em;
+				font-weight: bold;
+			}
+			p{
+				margin: 15px 0;
+				display: inline-block;
+			}
+			.company p{
+				padding: 0 50px;
+			}
+			@media screen and (max-width: 770px){
+				.col-md-4{
+					padding: 0;
+				}
+			}
+		}
+	}
+}

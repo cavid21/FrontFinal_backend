@@ -1,0 +1,301 @@
+#home{
+	background-image: url("../images/backgroundImage.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+
+	.container{
+		.navbar{
+			border: none;
+			background-color: transparent;
+			margin-top: 15px;
+			.navbar-brand{
+				width: 150px;
+			}
+			.collapsed {
+				margin-top: 15px;
+			}
+		}
+		.navbar-brand{
+			margin-right: 20px;
+		}
+		
+		.navbar-nav{
+			margin-top: 5px;
+			.activ{
+				
+				border-bottom: 2px solid $colorBlueBtn;
+				a{
+					color: $colorBlueText;
+				}
+			}
+			a{
+				text-transform: uppercase;
+				color: $colorWhite;
+				font-size: 0.9em;
+				padding-left: 12px;
+				padding-right: 12px;
+				color: lightgray;
+				transition: all 0.3s ease;
+				font-weight: 500;
+
+				&:hover{
+					color: $colorBlueText;
+				}
+			}
+
+			.drop{
+
+				ul{
+					position: absolute;
+					z-index: 1111;
+					
+					li{
+						width: 190px;
+						background-color: #272727;
+						padding: 0 15px;
+						&:hover{
+							background-color: #000;
+						}
+						a{
+							display: block;
+							text-decoration: none;
+							padding: 15px 0;
+							border-bottom: 1px solid darken(gray, 30%);
+						}
+						.homePages, .blog, .ecommerce{
+							position: absolute;
+							left: 190px;
+							top: 0;
+						}
+						.blog{
+							top: 50px;
+						}
+						.ecommerce{
+							top: 100px;
+						}
+						@media screen and (min-width: 760px) and (max-width:1200px){
+							.homePages, .blog, .ecommerce{
+								position: absolute;
+								left: -190px;
+								top: 0;
+							}
+							.blog{
+								top: 50px;
+							}
+							.ecommerce{
+								top: 100px;
+							}
+						}
+					}
+				}
+				@media screen and (max-width: 480px), screen and (min-width: 480px) and (max-width: 768px){
+						ul{
+							width: 100%;
+							li{
+							width: 100%;
+							.homePages, .blog, .ecommerce{
+								position: relative;
+								left: 0;
+								right: 0;
+							}
+							.blog{
+								top: 0px;
+							}
+							.ecommerce{
+								top: 0px;
+							}
+							ul{
+								width: 100%;
+								li{
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		button{
+			margin: 5px 0;
+			@include button(transparent, white, 0 25px );
+			padding: 7px 0;
+			margin-top: 3px;
+
+			&:nth-child(1){
+				border: none;
+				a{
+					color: lightgray;
+				}
+				&:hover{
+					a{
+						color:$colorBlueBtn;
+						transition: all 0.3s ease;
+					}
+				}
+			}
+
+			&:nth-child(2){
+				border-color: $colorBlueBtn;
+				transition: all 0.3s ease;
+				a{
+					color: $colorBlueText;
+				}
+				&:hover{
+					background-color: $colorBlueBtn;
+					a{
+						color: white;
+					}
+				}
+			}
+		}
+		@media screen and (min-width: 760px) and (max-width:1200px){
+			.navbar-nav{
+				a{
+					padding: 5px;
+				}
+			}	
+			button{
+				@include button(transparent, white, 0 13px );
+				padding: 5px 0;
+				margin:0;
+			}
+		}
+
+		.content{
+			margin: 228px 0;
+			text-align: center;
+			padding: 15px;
+			h1{
+				font-size: 3.5em;
+				color: #fff;
+				margin-bottom: 10px;
+				span{
+					color: $colorBlueText;
+				}
+			}
+
+			h3{
+
+				font-size: 1.6em;
+				color: #fff;
+				margin-bottom: 30px;
+			}
+
+			button{
+				
+				@include button(transparent, white, 0 0px );
+				color: #fff;
+				padding: 10px 25px;
+
+				&:nth-child(3){
+					padding-left: 40px;
+					padding-right: 40px;
+					background-color: $colorBlueBtn;
+					border-color: $colorBlueBtn;
+					transition: all 0.3s ease;
+					&:hover{
+						background-color: lighten($colorBlueBtn, 10%);
+					}
+				}
+
+				&:last-child{
+					margin-left: 5px;
+					transition: all 0.3s ease;
+					&:hover{
+						background-color: #fff;
+						a{
+							color: $colorBlueText;
+							transition: all 0.3s ease;
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				h1{
+					font-size: 1.8em;
+					margin-bottom: 10px; 
+				}
+				h3{
+					font-size: 1.3em; 
+				}
+
+				button{
+					width: 100%;
+					&:last-child{
+						margin-left: 0;
+					}
+
+				}
+			}
+			@media screen and (min-width: 480px) and (max-width: 768px){
+				h1{
+					font-size: 2.2em;
+					margin-bottom: 10px; 
+				}
+				h3{
+					font-size: 1.4em; 
+				}
+			}
+
+			@media screen and (min-width: 768px) and (max-width: 1024px){
+				h1{
+					font-size: 2.9em;
+					margin-bottom: 10px; 
+				}
+				h3{
+					font-size: 1.6em; 
+				}
+			}
+
+		}
+
+
+		@media screen and (max-width: 480px){
+			.content{
+				margin: 115px 0;
+			}
+			
+			li {
+				text-align: center;
+			}
+			.extra{
+				
+			}
+			form {
+				text-align: center;
+			}
+		}
+
+		@media screen and (min-width: 480px) and (max-width: 768px){
+			.content{
+				margin: 155px 0;
+			}
+
+			.navbar-brand{
+				
+			}
+			li {
+				text-align: center;
+			}
+			.extra{
+				// display: none;
+			}
+			form {
+				text-align: center;
+			}
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 1024px){
+			.navbar-brand{
+				display: none;
+			}
+			.content{
+				margin: 180px 0;
+			}	
+		}
+	}
+}
